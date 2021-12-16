@@ -6,6 +6,7 @@ export const UsersContext = createContext([]);
 export const UsersProvider = ({ children }) => {
 
     const [users, setUsers] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/users")
@@ -13,12 +14,12 @@ export const UsersProvider = ({ children }) => {
                 setUsers(response.data)
             })
             .catch(err => console.log(err))
-            .finally(console.log("Concluído"))
+            .finally(setIsLoading(false))
     }, [])
 
 
     return (
-        <UsersContext.Provider value={{users, setUsers}}>
+        <UsersContext.Provider value={{users, setUsers, isLoading, setIsLoading}}>
             {children}
         </UsersContext.Provider>
     )

@@ -1,18 +1,5 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div`
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0px;
-        width: 100%;
-
-`
-export const NotFound = styled.img`
-    width: 60%;
-    height: 60%;
-`
-
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -60,8 +47,8 @@ export const CardContainer = styled.div`
     }
 
     @media (min-width: 1920px) {
-        width: 50vw;
-        height: 80vh;
+        width: 40vw;
+        height: 50vh;
         padding: 10px 50px;
 
         p {
@@ -73,6 +60,16 @@ export const CardContainer = styled.div`
             margin-bottom: 15px;
         }
     }
-
-
 `    
+export const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    width: 100%;
+
+`
+export const NotFound = styled.img`
+    width: 60%;
+    height: 60%;
+`
