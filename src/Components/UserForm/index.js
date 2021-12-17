@@ -28,7 +28,7 @@ export const UserForm = () => {
             company: {
                 name: data[9]
             },
-            website: data[10]
+            website: data[10] === "" ? "Não informado" : data[10]
         }
         return user
     }

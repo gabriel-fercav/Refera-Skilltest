@@ -55,7 +55,7 @@ export const Container = styled.div`
     }
 
     @media (min-width: 1300px) {
-        max-width: 400px;
+        max-width: 500px;
         padding: 10px 50px;
         display: flex;
         flex-direction: column;
@@ -70,7 +70,7 @@ export const Container = styled.div`
     }
 
     @media (min-width: 1920px) {
-        max-width: 400px;
+        max-width: 500px;
         height: 60%;
         padding: 10px 50px;
         display: flex;
