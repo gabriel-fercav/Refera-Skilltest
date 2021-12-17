@@ -6,7 +6,7 @@ import { Button } from '@material-ui/core'
 import { UserButton, Container, Wrapper } from "./styles"
 
 
-const UserList = () => {
+export const UserList = () => {
 
     const history = useHistory()
 

@@ -3,14 +3,16 @@ import { Button } from "@material-ui/core"
 import { useContext, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { UsersContext } from "../../Provider/UsersProvider";
+import SuccessPopup from "../SuccessPopup";
 
 export const UserForm = () => {
 
     const { users, setUsers } = useContext(UsersContext)
+    const [finished, setFinished] = useState(false)
     const history = useHistory()
 
     const createTemplate = (data) => {
-        console.log(users.length+1)
+        console.log(users.length + 1)
         let user = {
             id: users.length + 1,
             name: data[0],
@@ -39,29 +41,36 @@ export const UserForm = () => {
             data.push(item.value)
         }
         setUsers([...users, createTemplate(data)])
+        setFinished(true)
     }
 
     return (
-        <Container>
-            <h3>Registration Form</h3>
-            <form className="user__form" onSubmit={(e) => handleSubmit(e)}>
-                <Register name="name" placeholder="Name" />
-                <Register name="age" placeholder="Age" />
-                <Register name="email" placeholder="Email" />
-                <Register name="phone" placeholder="Phone" />
-                <Register name="cpf" placeholder="CPF" />
-                <Register name="city" placeholder="City" />
-                <Register name="street" placeholder="Street" />
-                <Register name="suite" placeholder="Suite" />
-                <Register name="zipcode" placeholder="Zipcode" />
-                <Register name="company" placeholder="Company" />
-                <Register name="website" placeholder="Website" />
-                <ButtonWrapper>
-                    <Button variant="contained" onClick={() => history.push("/")}>Cancel</Button>
-                    <Button variant="contained" color="primary" type="submit">Save</Button>
-                </ButtonWrapper>
-            </form>
-        </Container>
+        <>
+            { finished ?
+                <SuccessPopup />
+                :
+                <Container>
+                    <h3>Registration Form</h3>
+                    <form className="user__form" onSubmit={(e) => handleSubmit(e)}>
+                        <Register name="name" placeholder="Name" />
+                        <Register name="age" placeholder="Age" />
+                        <Register name="email" placeholder="Email" />
+                        <Register name="phone" placeholder="Phone" />
+                        <Register name="cpf" placeholder="CPF" />
+                        <Register name="city" placeholder="City" />
+                        <Register name="street" placeholder="Street" />
+                        <Register name="suite" placeholder="Suite" />
+                        <Register name="zipcode" placeholder="Zipcode" />
+                        <Register name="company" placeholder="Company" />
+                        <Register name="website" placeholder="Website" />
+                        <ButtonWrapper>
+                            <Button variant="contained" onClick={() => history.push("/")}>Cancel</Button>
+                            <Button variant="contained" color="primary" type="submit">Save</Button>
+                        </ButtonWrapper>
+                    </form>
+                </Container>
+            }
+        </>
     )
 }
 
