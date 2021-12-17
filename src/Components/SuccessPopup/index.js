@@ -1,5 +1,4 @@
 import { CardContainer } from "./styles";
-import { Button } from "@material-ui/core"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import success from "../../Assets/success.svg"
 import { AiFillCloseCircle } from 'react-icons/ai'

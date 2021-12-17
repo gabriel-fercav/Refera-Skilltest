@@ -12,7 +12,6 @@ export const UserForm = () => {
     const history = useHistory()
 
     const createTemplate = (data) => {
-        console.log(users.length + 1)
         let user = {
             id: users.length + 1,
             name: data[0],
