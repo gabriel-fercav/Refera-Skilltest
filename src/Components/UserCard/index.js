@@ -30,15 +30,15 @@ export const UserCard = () => {
                         <p><span>CEP:</span> {address.zipcode}</p>
                         <p><span>Empresa:</span> {selectedUser.company.name}</p>
                         <Wrapper>
-                            <Button onClick={() => history.push("/")} variant="contained" color="primary">Voltar</Button>
+                            <Button onClick={() => history.push("/")} variant="contained" color="primary">Return</Button>
                         </Wrapper>
                     </CardContainer >
                     :
                     <>
-                        <NotFound src={not_found}/>
+                        <NotFound src={not_found} />
                         <h2>Sorry :( We couldn't find what you're looking for</h2>
                         <Wrapper>
-                            <Button onClick={() => history.push("/")} variant="contained" color="primary">Voltar</Button>
+                            <Button onClick={() => history.push("/")} variant="contained" color="primary">Return</Button>
                         </Wrapper>
                     </>
             }

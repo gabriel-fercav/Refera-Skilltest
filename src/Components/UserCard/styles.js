@@ -7,11 +7,9 @@ export const CardContainer = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
     width: 100%;
     height: 100%;
-    padding: 10px 30px;
+    padding: 10px 10px;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
 
@@ -35,6 +33,8 @@ export const CardContainer = styled.div`
         width: 50vw;
         height: 80vh;
         padding: 10px 50px;
+        border-radius: 15px;
+          box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
 
         p {
             margin-bottom: 5px; 
@@ -50,6 +50,8 @@ export const CardContainer = styled.div`
         width: 40vw;
         height: 50vh;
         padding: 10px 50px;
+        border-radius: 15px;
+        box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
 
         p {
             margin-bottom: 5px; 
@@ -65,7 +67,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px;
+    margin: 50px 0px;
     width: 100%;
 
 `

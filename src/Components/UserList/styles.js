@@ -41,29 +41,47 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     background-color: white;
-    border-radius: 15px;
-    box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
-    width: 100%;
-    padding: 10px 30px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    padding: 10px 10px;
     box-sizing: border-box;
-    height: 100%;
-    backdrop-filter: blur(10px);
 
     .user__list {
-        padding: 0px 20px;
+        padding: 0px 5px;
         list-style-type: none;
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%;
     }
 
     @media (min-width: 1300px) {
-        width: 400px;
+        max-width: 400px;
         padding: 10px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
+        box-sizing: border-box;
+        height: 100%;
+        backdrop-filter: blur(10px);
     }
 
     @media (min-width: 1920px) {
-        width: 400px;
+        max-width: 400px;
+        height: 60%;
         padding: 10px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 4px 5px 22px -2px rgba(105,105,105,0.64);
+        box-sizing: border-box;
+        backdrop-filter: blur(10px);
     }
 
 

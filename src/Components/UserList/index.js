@@ -24,7 +24,8 @@ const UserList = () => {
                 <Container>
                     <Wrapper>
                         <h3>USER LIST</h3>
-                        <Button variant="contained" color="primary">New User</Button>
+                        <Button variant="contained" color="primary"
+                            onClick={() => history.push("/register")}>New User</Button>
                     </Wrapper>
                     <li className="user__list">
                         {users.map((x, y) => {
