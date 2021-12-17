@@ -16,8 +16,8 @@ export const UserForm = () => {
             id: users.length + 1,
             name: data[0],
             age: data[1],
-            email: data[2],
-            phone: data[3],
+            email: data[2] === "" ? "Não informado" : data[2],
+            phone: data[3] === "" ? "Não informado" : data[3],
             cpf: data[4],
             address: {
                 city: data[5],
@@ -26,7 +26,7 @@ export const UserForm = () => {
                 zipcode: data[8]
             },
             company: {
-                name: data[9]
+                name: data[9] === "" ? "Não informado" : data[9]
             },
             website: data[10] === "" ? "Não informado" : data[10]
         }
@@ -51,16 +51,16 @@ export const UserForm = () => {
                 <Container>
                     <h3>Registration Form</h3>
                     <form className="user__form" onSubmit={(e) => handleSubmit(e)}>
-                        <Register name="name" placeholder="Name" required />
-                        <Register name="age" placeholder="Age" required />
-                        <Register type="email" name="email" placeholder="Email" required />
-                        <Register name="phone" placeholder="Phone" required />
-                        <Register name="cpf" placeholder="CPF" required />
-                        <Register name="city" placeholder="City" required />
-                        <Register name="street" placeholder="Street" required />
-                        <Register name="suite" placeholder="Suite" required />
-                        <Register name="zipcode" placeholder="Zipcode" required />
-                        <Register name="company" placeholder="Company" required />
+                        <Register name="name" placeholder="Name*" required />
+                        <Register name="age" placeholder="Age*" required />
+                        <Register type="email" name="email" placeholder="Email" />
+                        <Register name="phone" placeholder="Phone" />
+                        <Register name="cpf" placeholder="CPF*" required />
+                        <Register name="city" placeholder="City*" required />
+                        <Register name="street" placeholder="Street*" required />
+                        <Register name="suite" placeholder="Suite*" required />
+                        <Register name="zipcode" placeholder="Zipcode*" required />
+                        <Register name="company" placeholder="Company" />
                         <Register name="website" placeholder="Website" />
                         <ButtonWrapper>
                             <Button variant="contained" onClick={() => history.push("/")}>Cancel</Button>
