@@ -10,6 +10,7 @@ export const UserButton = styled.button`
     text-align: left;
     transition: 1s all;
     font-size: 1.1rem;
+    cursor: pointer;
 
     &:hover {
         padding-left: 10%;
