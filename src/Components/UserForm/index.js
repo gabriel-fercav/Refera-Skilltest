@@ -52,16 +52,16 @@ export const UserForm = () => {
                 <Container>
                     <h3>Registration Form</h3>
                     <form className="user__form" onSubmit={(e) => handleSubmit(e)}>
-                        <Register name="name" placeholder="Name" />
-                        <Register name="age" placeholder="Age" />
-                        <Register name="email" placeholder="Email" />
-                        <Register name="phone" placeholder="Phone" />
-                        <Register name="cpf" placeholder="CPF" />
-                        <Register name="city" placeholder="City" />
-                        <Register name="street" placeholder="Street" />
-                        <Register name="suite" placeholder="Suite" />
-                        <Register name="zipcode" placeholder="Zipcode" />
-                        <Register name="company" placeholder="Company" />
+                        <Register name="name" placeholder="Name" required />
+                        <Register name="age" placeholder="Age" required />
+                        <Register type="email" name="email" placeholder="Email" required />
+                        <Register name="phone" placeholder="Phone" required />
+                        <Register name="cpf" placeholder="CPF" required />
+                        <Register name="city" placeholder="City" required />
+                        <Register name="street" placeholder="Street" required />
+                        <Register name="suite" placeholder="Suite" required />
+                        <Register name="zipcode" placeholder="Zipcode" required />
+                        <Register name="company" placeholder="Company" required />
                         <Register name="website" placeholder="Website" />
                         <ButtonWrapper>
                             <Button variant="contained" onClick={() => history.push("/")}>Cancel</Button>

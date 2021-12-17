@@ -68,6 +68,7 @@ export const ButtonWrapper = styled.div`
 export const Register = styled.input`
     width: 90%;
     height: 40px;
+    padding-left: 10px;
     border: none;
     border-bottom: 1px solid lightgray;
 
